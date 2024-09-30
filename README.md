@@ -10,7 +10,6 @@ This project implements a real-time gunshot detection system on an FPGA using Me
 
 - [Project Overview](#project-overview)
 - [Features](#features)
-- [Directory Structure](#directory-structure)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup Instructions](#setup-instructions)
@@ -51,48 +50,6 @@ The goal of this project is to create a robust and efficient gunshot detection s
 - **Scalability**: Designed to be scalable to different FPGA platforms and resource constraints.
 - **Customizable Parameters**: Allows adjustments to precision, frame sizes, and HMM parameters.
 
----
-
-## Directory Structure
-
-```
-gunshot_detection_fpga/
-├── README.md
-├── docs/
-│   └── design_documentation.pdf
-├── src/
-│   ├── mfcc/
-│   │   ├── mfcc_top.vhd
-│   │   ├── pre_emphasis.vhd
-│   │   ├── framing.vhd
-│   │   ├── windowing.vhd
-│   │   ├── fft.vhd
-│   │   ├── mel_filter_bank.vhd
-│   │   ├── log_module.vhd
-│   │   └── dct.vhd
-│   ├── hmm/
-│   │   ├── hmm_top.vhd
-│   │   ├── forward_algorithm.vhd
-│   │   └── viterbi_algorithm.vhd
-│   ├── top_level.vhd
-│   └── pkg/
-│       └── fixed_point_pkg.vhd
-├── sim/
-│   ├── tb_mfcc.vhd
-│   ├── tb_hmm.vhd
-│   └── tb_top_level.vhd
-├── scripts/
-│   ├── compile.tcl
-│   ├── simulate.tcl
-│   └── synthesize.tcl
-├── constraints/
-│   └── constraints.xdc
-└── data/
-    ├── test_audio_samples/
-    └── trained_hmm_parameters/
-```
-
----
 
 ## Getting Started
 
